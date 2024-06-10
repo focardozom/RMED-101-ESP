@@ -154,7 +154,7 @@ class(mi_lista)
 
 ### Ejercicio 1: Crear un vector
 
-Crea un vector con los números del 1 al 10 y muestra su longitud y tipo de dato.
+Crea un vector con los números del 1 al 10 y muestra su longitud y tipo.
 
 ```{r}
 # codigo aquí
