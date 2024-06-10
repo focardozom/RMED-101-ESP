@@ -1,5 +1,7 @@
 # Promover la Equidad Científica: Una Introducción al uso de R para la Programación en Bioestadística y Ciencia de Datos, en Español
 
+Taller presentado en R/medicine 2024. 
+
 ## Descripción
 
 Este taller en español sobre R busca reducir barreras en la formación en uso de software, proporcionando a los participantes habilidades básicas en R y la creación de informes reproducibles. Utilizaremos datos reales de América Latina para prácticas de análisis y visualización.
