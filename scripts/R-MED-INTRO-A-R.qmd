@@ -1,0 +1,183 @@
+---
+title: "R para la programación en Bioestadística y Ciencia de Datos: Introducción a R"
+subtitle: "R medicine 2024"
+format:
+  html:
+    toc: true
+    css: style.css
+editor_options: 
+  chunk_output_type: console
+author: 
+  - "Catalina Cañizares"
+  - "Francisco Cardozo"
+date: "2024-10-06"
+date-format: "long"
+self-contained: true
+---
+---
+
+# Objetos y Variables en R
+
+## Introducción
+
+En este taller, aprenderemos sobre los tipos de datos que existen en R. Aprender a identificar los diferentes tipos de datos es escencial para poder sacar más provecho de este paquete. Primero, vamos a definir cuáles tipos de variables existen en R.
+
+## Tipos de variables en R
+
+### 1. Números
+
+#### Enteros
+
+Los números enteros son números sin decimales. En R, los enteros se definen utilizando la función `as.integer()` o agregando una `L` al final del número.
+
+```{r}
+un_numero <- 10
+mi_entero <- as.integer(10)
+mi_entero2 <- 10L
+
+class(un_numero)
+class(mi_entero)
+class(mi_entero2)
+
+```
+
+#### Números Decimales (Double)
+
+Los números decimales en R se denominan “double” o “numeric”. Se definen simplemente escribiendo el número con decimales.
+
+```{r}
+# Definiendo un número decimal
+mi_decimal <- 10.5
+
+# Mostrando el tipo de dato
+class(mi_decimal)
+```
+
+### 2. Caracteres/palabras (Strings)
+
+Los caracteres son letras o número que se definen entre comillas simples o dobles.
+
+```{r}
+mi_caracter <- "Hola, mundo!"
+
+class(mi_caracter)
+```
+
+### 3. Lógicos (Booleanos)
+
+Los valores lógicos son TRUE o FALSE.
+
+```{r}
+mi_logico <- TRUE
+mi_logico
+class(mi_logico)
+```
+
+### 4. Factores
+
+Los factores se utilizan para datos categóricos y pueden tener niveles ordenados o no ordenados.
+
+```{r}
+mi_factor <- factor(c("bajo", "medio", "alto"))
+
+class(mi_factor)
+mi_factor
+
+mi_factor_ordenado <- factor(c("bajo", "medio", "alto"), ordered = TRUE)
+
+class(mi_factor_ordenado)
+mi_factor_ordenado
+```
+
+### En resumen
+
+![](../img/types_of_variables.drawio.svg)
+
+
+## Tipos de objetos en R
+
+### 1. Vectores
+
+Un vector es una colección de elementos del mismo tipo. Se puede crear utilizando la función `c()`.
+
+```{r}
+mi_vector <- c(1, 2, 3, 4, 5)
+
+class(mi_vector)
+length(mi_vector)
+```
+
+### 2. Matrices
+
+Una matriz es una colección de elementos del mismo tipo organizados en dos dimensiones. Se puede crear utilizando la función matrix().
+
+```{r}
+mi_matriz <- matrix(1:9, nrow = 3, ncol = 3)
+
+print(mi_matriz)
+class(mi_matriz)
+```
+
+### 3. Data Frames
+
+Un data frame es una colecciónde elementos donde las columnas pueden ser de diferentes tipos. Se puede crear utilizando la función `data.frame()`. Más adelante vamos a llamar a los "data.frame" como "tibble", cuando agreguemos algunas características adicionales que hacen más fácil el entendimiento de la estructura de los datos.
+
+```{r}
+mi_data_frame <- data.frame(
+  nombre = c("Ana", "Luis", "Carlos"),
+  edad = c(23, 25, 30),
+  altura = c(160, 175, 168)
+)
+
+print(mi_data_frame)
+class(mi_data_frame)
+```
+
+### 4. Listas
+
+Una lista es una colección de elementos que pueden ser de diferentes tipos. Se puede crear utilizando la función `list()`.
+
+```{r}
+
+mi_lista <- list(
+  nombre = "Ana",
+  edad = 23,
+  alturas = c(160, 175, 168)
+)
+
+# Mostrando la lista y su tipo de dato
+print(mi_lista)
+class(mi_lista)
+```
+
+## Ejercicio
+
+### Ejercicio 1: Crear un vector
+
+Crea un vector con los números del 1 al 10 y muestra su longitud y tipo de dato.
+
+```{r}
+# codigo aquí
+```
+
+#### Ejercicio 2: Crear un data frame
+
+Crea un data frame con los nombres y edades de 3 personas. Muestra el data frame.
+
+
+```{r}
+# Código aquí
+```
+
+# Resumen
+
+Aprendimos a identificar y trabajar con diferentes tipos de datos. Cubrimos los números enteros, que se definen usando `as.integer()` o agregando una `L` al final del número, y los números decimales (double), que se escriben simplemente con decimales. También exploramos los caracteres (strings), que son letras o números definidos entre comillas, y los valores lógicos (booleanos), que pueden ser TRUE o FALSE. Además, vimos cómo manejar factores para datos categóricos, que pueden ser ordenados o no. Posteriormente, vimos los vectores (colecciones de elementos del mismo tipo), matrices (estructuras bidimensionales de elementos del mismo tipo), data frames (colecciones de elementos donde las columnas pueden ser de diferentes tipos), y listas (colecciones de elementos que pueden ser de diferentes tipos). 
+
+Ahora vamos a profundizar en los `data.frame` que son estructuras de datos bastante comunes.
+
+
+
+
+
+
+

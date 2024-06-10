@@ -1,0 +1,104 @@
+/* Importa las fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@400;700&family=Fira+Sans:wght@400;700&family=Pavanam&display=swap');
+
+h1  {
+    font-family: 'Fira Sans', sans-serif; /* Fuente para subtítulos */
+    color: #8f8d8d
+}
+
+h2, h3 {
+  font-family: 'Neuton', serif; /* Fuente para encabezados */
+  color: #8f8d8d;
+}
+
+p {
+  font-family: 'Pavanam', sans-serif; /* Fuente para párrafos */
+  size: 9px;
+}
+
+p.subtitle {
+    font-size: 1em;
+    color: #8f8d8d;
+}
+
+a {
+    color: #7e1583; /* Color de los enlaces */
+}
+
+.map {
+    border: 5px solid #51bddb;
+    border-radius: 10px;
+    width: 100%; 
+    max-width: 800px; 
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+.objetivo{
+    font-weight: bold;
+}
+
+.panel-tabset {
+    background: #f5f5f5;
+}
+
+.nav-tabs .nav-link{
+    color: #7e1583;
+}
+
+
+.retro-text > p {
+    font-size: 50px;
+    margin-top: 50px;
+    color: #f0f;
+    text-align: center;
+    text-shadow: 
+        0 0 5px #ff00ff, 
+        0 0 10px #ff00ff, 
+        0 0 20px #ff00ff, 
+        0 0 40px #ff00ff, 
+        0 0 80px #ff00ff, 
+        0 0 90px #ff00ff, 
+        0 0 100px #ff00ff, 
+        0 0 150px #ff00ff;
+    animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+        text-shadow: 
+            0 0 5px #ff00ff, 
+            0 0 10px #ff00ff, 
+            0 0 20px #ff00ff, 
+            0 0 40px #ff00ff, 
+            0 0 80px #ff00ff, 
+            0 0 90px #ff00ff, 
+            0 0 100px #ff00ff, 
+            0 0 150px #ff00ff;
+    }
+    50% {
+        opacity: 0.8;
+        text-shadow: 
+            0 0 5px #ff00ff, 
+            0 0 10px #ff00ff, 
+            0 0 20px #ff00ff, 
+            0 0 30px #ff00ff, 
+            0 0 60px #ff00ff, 
+            0 0 70px #ff00ff, 
+            0 0 80px #ff00ff, 
+            0 0 120px #ff00ff;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 
+            0 0 5px #ff00ff, 
+            0 0 10px #ff00ff, 
+            0 0 20px #ff00ff, 
+            0 0 40px #ff00ff, 
+            0 0 80px #ff00ff, 
+            0 0 90px #ff00ff, 
+            0 0 100px #ff00ff, 
+            0 0 150px #ff00ff;
+    }
+}
